@@ -1,14 +1,14 @@
-name: generate animation
+name:  Elite HFT Snake Animation
 
 on:
-  # dijalankan otomatis setiap 24 jam
+  # Mengeksekusi algoritma setiap 12 jam (menjaga data tetap real-time)
   schedule:
-    - cron: "0 */24 * * *" 
+    - cron: "0 */12 * * *" 
   
-  # mengizinkan eksekusi manual dari tab Actions
+  # Manual trigger untuk eksekusi instan di tab Actions
   workflow_dispatch:
   
-  # dijalankan pada setiap push ke branch main/master
+  # Memicu regenerasi otomatis setiap kali ada arsitektur baru yang di-push
   push:
     branches:
     - main
@@ -22,17 +22,26 @@ jobs:
     timeout-minutes: 5
     
     steps:
-      # membuat animasi ular dari github user
-      - name: generate github-contribution-grid-snake.svg
+      # Mengkompilasi grid kontribusi dengan palet warna tingkat tinggi
+      - name:  Synthesizing Contribution Grid (Tech-Dominant)
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#00ffff&color_dots=#161b22,#4b0082,#8a2be2,#9400d3,#ff00ff
+            # 1. Tema "Cyberpunk Terminal" (Cyan Snake, Neon Purple ke Pink)
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#00FFFF&color_dots=#0D1117,#3B0066,#6B00B3,#B800FF,#FF00FF
+            
+            # 2. Tema "HFT Matrix" (White Lightning Snake, Matrix Green ke Cyan)
+            dist/github-contribution-grid-snake-matrix.svg?palette=github-dark&color_snake=#FFFFFF&color_dots=#0D1117,#003B00,#008F11,#00FF41,#00FFFF
+            
+            # 3. Tema "Blood Moon / Sith" (Gold Snake, Crimson Red)
+            dist/github-contribution-grid-snake-blood.svg?palette=github-dark&color_snake=#FFD700&color_dots=#0D1117,#4A0000,#8B0000,#DC143C,#FF0000
+            
+            # 4. Mode Terang Standar (Sebagai Fallback)
+            dist/github-contribution-grid-snake.svg?color_snake=#000000
           
-      # push file svg ke branch output
-      - name: push github-contribution-grid-snake.svg to the output branch
+      # Meluncurkan hasil render ke branch output
+      - name:  Deploying to Output Branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
