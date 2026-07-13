@@ -40,7 +40,7 @@ jobs:
             # 4. Mode Terang Standar (Sebagai Fallback)
             dist/github-contribution-grid-snake.svg?color_snake=#000000
           
-      # Meluncurkan hasil render ke branch output
+      # Meluncurkan  hasil render ke branch output
       - name:  Deploying to Output Branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
