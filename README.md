@@ -1,5 +1,4 @@
-## Hi there 👋
-
+## hi everyone
 <!--
 **rizki-putra-saimona-armen/rizki-putra-saimona-armen** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
