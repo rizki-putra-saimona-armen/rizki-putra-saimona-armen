@@ -21,12 +21,3 @@ I'm Saimona. I am engineering financial architectures through a brutal Quantitat
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 
-#  Projects:
-<div align="center">
-  <a href="https://github.com/rizki-putra-saimona-armen/RNN-Time-Series-Forecasting-with-PyTorch">
-    <img src="https://github-readme-stats.shion.dev/api/pin/?username=rizki-putra-saimona-armen&repo=RNN-Time-Series-Forecasting-with-PyTorch&theme=neon&hide_border=false" alt="RNN Time Series" />
-  </a>
-  <a href="https://github.com/rizki-putra-saimona-armen/XGBoost_Classifier_Heart_Attack_Prediction_Indonesia">
-    <img src="https://github-readme-stats.shion.dev/api/pin/?username=rizki-putra-saimona-armen&repo=XGBoost_Classifier_Heart_Attack_Prediction_Indonesia&theme=neon&hide_border=false" alt="XGBoost Classifier" />
-  </a>
-</div>
